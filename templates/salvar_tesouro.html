@@ -4,8 +4,10 @@
 {% block content %}
 
   <h1>Salvar Tesouro </h1>
-
-
-
+  <form method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      {{ tesouro }}
+      <button>Enviar</button>
+   </form>
 
 {% endblock %}
